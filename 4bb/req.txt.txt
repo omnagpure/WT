@@ -1,0 +1,13 @@
+npm init -y
+npm install express mongodb
+node index.js
+
+connext mongodb compass
+
+http://localhost:3000
+
+{
+   "name": "Om",
+  "email": "om@example.com",
+  "city": "Pune" 
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered Users - Assignment 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Registration</a>
+        <h2>Registered Users - Assignment 2</h2>
+        <ul id="usersList" class="user-list">
+            <!-- Users will be populated here by JavaScript -->
+        </ul>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const usersList = document.getElementById('usersList');
+            
+            // Get users from local storage
+            const users = JSON.parse(localStorage.getItem('users') || '[]');
+            
+            if (users.length === 0) {
+                usersList.innerHTML = '<p>No users registered yet.</p>';
+                return;
+            }
+            
+            // Display each user
+            users.forEach(user => {
+                const li = document.createElement('li');
+                li.className = 'user-card';
+                li.innerHTML = `
+                    <p><strong>Name:</strong> ${user.name}</p>
+                    <p><strong>Email:</strong> ${user.email}</p>
+                    <p><strong>Phone:</strong> ${user.phone}</p>
+                `;
+                usersList.appendChild(li);
+            });
+        });
+    </script>
+</body>
+</html>

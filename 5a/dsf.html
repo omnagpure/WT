@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple Mobile Website</title>
+
+  <!-- jQuery & jQuery Mobile CDN -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <style>
+    .custom-header {
+      background-color: #007bff !important;
+      color: white !important;
+      text-shadow: none;
+    }
+
+    .custom-footer {
+      background-color: #343a40 !important;
+      color: white !important;
+      text-shadow: none;
+    }
+
+    .content-center {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .content-center img {
+      border-radius: 10px;
+      width: 90%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Home Page -->
+  <div data-role="page" id="home">
+    <div data-role="header" class="custom-header">
+      <h1>My Mobile Website</h1>
+    </div>
+
+    <div role="main" class="ui-content content-center">
+      <h2>Welcome!</h2>
+      <p>This is a simple mobile-friendly website using jQuery Mobile.</p>
+      <img src="https://via.placeholder.com/400x200.png?text=Mobile+Website" alt="Image">
+      <a href="#about" data-role="button" data-theme="b">Go to About Page</a>
+    </div>
+
+    <div data-role="footer" class="custom-footer">
+      <h4>© 2025 My Mobile Site</h4>
+    </div>
+  </div>
+
+  <!-- About Page -->
+  <div data-role="page" id="about">
+    <div data-role="header" data-add-back-btn="true" class="custom-header">
+      <h1>About Us</h1>
+    </div>
+
+    <div role="main" class="ui-content">
+      <p>This mobile website demonstrates basic navigation and styling using jQuery Mobile.</p>
+
+      <ul data-role="listview" data-inset="true">
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#services">Our Services</a></li>
+      </ul>
+    </div>
+
+    <div data-role="footer" class="custom-footer">
+      <h4>Swipe or Use Buttons to Navigate</h4>
+    </div>
+  </div>
+
+  <!-- Services Page -->
+  <div data-role="page" id="services">
+    <div data-role="header" data-add-back-btn="true" class="custom-header">
+      <h1>Our Services</h1>
+    </div>
+
+    <div role="main" class="ui-content">
+      <p>We provide simple, responsive, and fast web solutions using jQuery Mobile and Bootstrap.</p>
+
+      <ul data-role="listview" data-inset="true">
+        <li>Web Development</li>
+        <li>Mobile App Design</li>
+        <li>Cloud Hosting</li>
+      </ul>
+    </div>
+
+    <div data-role="footer" class="custom-footer">
+      <h4>Back to Home</h4>
+    </div>
+  </div>
+
+  <!-- Contact Page -->
+  <div data-role="page" id="contact">
+    <div data-role="header" data-add-back-btn="true" class="custom-header">
+      <h1>Contact Us</h1>
+    </div>
+
+    <div role="main" class="ui-content">
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+
+        <label for="msg">Message:</label>
+        <textarea name="msg" id="msg"></textarea>
+
+        <button type="submit" class="ui-btn ui-btn-b ui-corner-all">Send</button>
+      </form>
+    </div>
+
+    <div data-role="footer" class="custom-footer">
+      <h4>Thank You for Visiting!</h4>
+    </div>
+  </div>
+
+</body>
+</html>

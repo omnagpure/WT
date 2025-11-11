@@ -1,0 +1,18 @@
+install docker desktop
+
+docker version
+mkdir hello-docker
+cd hello docker
+code
+create app.js , Dockerfile
+
+console.log("Hello, Docker!");
+
+FROM node:alpine
+COPY . /app
+WORKDIR /app
+CMD node app.js
+
+docker build -t hello-docker
+docker image ls
+docker run hello-docker

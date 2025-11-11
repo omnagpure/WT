@@ -1,0 +1,13 @@
+githubby
+create folder and file
+git -v
+git config --global user.name ""
+git config --global user.email ""
+cd path
+git init
+git add . 
+git commit -m "initial commit"
+git remote add origin https://github.com/mihir2320/dstetgewtr.git
+$ git branch -M main
+$ git push -u origin main
+
